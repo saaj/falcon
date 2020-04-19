@@ -18,6 +18,20 @@ export default {
             }]
         }]
     },
+    devServer: {
+      contentBase: './',
+      publicPath: '/static/',
+      before: function(app, server) {
+        app.get('/', function(req, res) {
+          res.sendFile(path.join(__dirname, 'static/index.html'));
+        });
+      },
+      proxy: [{
+        context: ['/connections', '/settings', '/tags', '/queries', '/images'],
+        logLevel: 'debug',
+        target: 'http://localhost:8000',
+      }]
+    },
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js',

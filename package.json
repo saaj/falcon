@@ -83,7 +83,6 @@
       "category": "Database",
       "desktop": {
         "Comment": "Free, open-source SQL client for Windows, Mac and Linux",
-        "Exec": "falcon-sql-client",
         "Icon": "falcon-sql-client",
         "Name": "Falcon SQL Client",
         "StartupNotify": "true",
@@ -94,7 +93,7 @@
       "executableName": "falcon-sql-client",
       "maintainer": "enquiries@nicolasriesco.net",
       "target": [
-        "tar.gz"
+        "AppImage"
       ],
       "icon": "app/icons"
     },
@@ -262,7 +261,7 @@
     "sequelize": "3.30.4",
     "shortid": "^2.2.13",
     "source-map-support": "^0.5.0",
-    "sqlite3": "^3.1.13",
+    "sqlite3": "^4.1.1",
     "tedious": "^2.1.4"
   },
   "engines": {
